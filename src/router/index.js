@@ -24,6 +24,11 @@ const router = createRouter({
             component: () => import('@/views/Draggable.vue')
         },
         {
+            path: '/random',
+            name: 'random',
+            component: () => import('@/views/Random.vue')
+        },
+        {
             path: '/login',
             name: 'login',
             component: () => import('@/views/Login.vue')
