@@ -2,9 +2,7 @@
     <div class="container" style="background-color: #083d41;">
         <div class="card">
             <div class="box">
-                <div class="img_box">
-                    <video src="./assets/video.mp4" muted loop autoplay />
-                </div>
+
             </div>
 
             <div class="box">
