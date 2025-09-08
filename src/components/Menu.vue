@@ -28,29 +28,39 @@ const state = reactive({
   showMenu: true,
   defaultOpen: ['1'],
   currentPath: '/',
-  menuData: [
-    {
-        title: '例子',
-        index: 1,
-        isActive: true,
-        pages: [
-            {name: '首页', path: '/index', icon: 'Edit', isActive: true},
-            {name: '盒子拉伸', path: '/stretch', isActive: true},
-            {name: '列表拖拽', path: '/draggable', isActive: true},
-            {name: '随机抽取', path: '/random', isActive: true}
-        ]
-    },
-    {
-        title: '样式动画',
-        index: 2,
-        isActive: true,
-        pages: [
-            {name: '介绍卡片', path: '/card', isActive: true},
-            {name: '动态词云', path: '/word_cloud', isActive: true},
-            {name: '卡片滑动', path: '/card_slide', isActive: true}
-        ]
-    }
-  ]
+    menuData: [
+        {
+            title: '跨境数据',
+            index: 1,
+            isActive: true,
+            pages: [
+                {name: '热搜词', path: '/keyword', isActive: true},
+                {name: '热销商品', path: '/hot-product', isActive: true},
+                {name: '热销新品', path: '/hot-product/new', isActive: true},
+            ]
+        },
+        {
+            title: '样式动画',
+            index: 2,
+            isActive: true,
+            pages: [
+                {name: '介绍卡片', path: '/card', isActive: true},
+                {name: '动态词云', path: '/word_cloud', isActive: true},
+                {name: '卡片滑动', path: '/card_slide', isActive: true}
+            ]
+        },
+        {
+            title: '例子',
+            index: 3,
+            isActive: true,
+            pages: [
+                {name: '首页', path: '/index', icon: 'Edit', isActive: true},
+                {name: '盒子拉伸', path: '/stretch', isActive: true},
+                {name: '列表拖拽', path: '/draggable', isActive: true},
+                {name: '随机抽取', path: '/random', isActive: true}
+            ]
+        },
+    ]
 })
 
 onMounted(async => {

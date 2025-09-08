@@ -24,10 +24,12 @@
       </div>
     </div>
   </template>
-  
+
   <script setup>
   import { reactive, ref } from 'vue'
   import { setLocal } from '../utils';
+  import {login} from "../service/data";
+
   const loginForm = ref(null)
   const state = reactive({
     ruleForm: {
@@ -45,9 +47,10 @@
     }
   })
   const submitForm = async () => {
-    loginForm.value.validate((valid) => {
+    loginForm.value.validate(async (valid) => {
       if (valid) {
         setLocal('token', state.ruleForm.username)
+        // const res = await login({username: state.ruleForm.username, password: state.ruleForm.password})
         window.location.href = '/'
       } else {
         console.log('error submit!!')
@@ -59,7 +62,7 @@
     loginForm.value.resetFields();
   }
   </script>
-  
+
   <style scoped>
     .login-body {
       display: flex;

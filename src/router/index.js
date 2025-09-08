@@ -5,7 +5,7 @@ const router = createRouter({
     routes: [
         {
             path: '/',
-            redirect: '/index'
+            redirect: '/keyword'
         },
         // 例子
         {
@@ -48,6 +48,22 @@ const router = createRouter({
             path: '/card_slide',
             name: 'card_slide',
             component: () => import('@/views/CardSlide.vue')
+        },
+        {
+            path: '/keyword',
+            name: 'keyword',
+            component: () => import('@/views/Keyword.vue')
+        },
+        {
+            path: '/hot-product',
+            name: 'hot-product',
+            component: () => import('@/views/HotProduct.vue')
+        },
+        {
+            path: '/hot-product/:type',
+            name: 'hot-product-new',
+            component: () => import('@/views/HotProduct.vue'),
+            props: true
         }
     ]
 })

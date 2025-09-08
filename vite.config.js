@@ -7,7 +7,14 @@ export default defineConfig({
   plugins: [vue()],
   server: {
     host: '0.0.0.0',
-    open: false
+    open: false,
+    proxy: {
+      '/api': {
+        target: 'https://www.youyingshuju.com/',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, '') // 移除/api前缀
+      }
+    }
   },
   resolve: {
     //统一设置文件路径@
