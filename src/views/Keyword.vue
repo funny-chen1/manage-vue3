@@ -8,8 +8,8 @@
             <el-table :data="state.tableData" style="width: 100%;margin-top: 20px;">
                 <el-table-column label="搜索词">
                     <template #default="scope">
-                        <div class="detail" @click="getProLis(scope.row.keyword)">
-                            {{ scope.row.keyword }} <a @click="copyText(scope.row.keyword)">复制</a>
+                        <div class="detail">
+                            <span @click="getProLis(scope.row.keyword)">{{ scope.row.keyword }}</span> <a @click="copyText(scope.row.keyword)">复制</a>
                         </div>
                     </template>
                 </el-table-column>
